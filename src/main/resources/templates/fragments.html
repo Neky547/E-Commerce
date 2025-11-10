@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Groovium</title>
+</head>
+<body>
+<div th:fragment="header" class="container-fluid">
+    <header class="row">
+        <!--Ma tête de page-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img th:src="@{img/logo.png}" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Rechercher">
+                        <button class="btn btn-outline-dark" type="submit">Chercher</button>
+                    </form>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="panier.html"><i class="bi bi-cart2"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="profil.html"><i class="bi bi-person-fill"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+</div>
+
+<div th:fragment="footer" class="container">
+    <footer class="">
+        <!--Mon pied de page-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+            <div class="container justify-text-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Conditions générales et avis de confidentialité</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Donnez-nous votre avis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Aide</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
