@@ -16,5 +16,5 @@ class Commentaire(
     //Association avec Utilisateur
     @ManyToOne
     @JoinColumn(name = "utilisateur_id")
-    var utilisateurs: Utilisateur? = null
+    var utilisateur: Utilisateur? = null
 ) {}
