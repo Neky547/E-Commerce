@@ -8,9 +8,13 @@ class Produit (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
 
-    var id: Int,
+    var id: Int? = null,
     var nom: String,
+    var description: String,
+    var stock: Int,
     var prix: Double,
+    var lienImage: String,
+
 
     //Association avec LigneCommande
     @OneToMany(mappedBy = "produit", orphanRemoval = true)
