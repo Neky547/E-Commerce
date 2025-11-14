@@ -5,7 +5,7 @@ import java.io.Serializable
 
 @Embeddable
 class LigneCommandeId (
-    var albumId: Int,
-    var utilisateurId: Int
+    var commandeId: Int,
+    var produitId: Int
 ): Serializable {
 }

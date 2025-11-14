@@ -10,7 +10,7 @@ import jakarta.persistence.MapsId
 @Entity
 class LigneCommande(
     @EmbeddedId
-    var quantite: Int,
+    //var quantite: Int,
     var ligneCommandeId: LigneCommandeId? = null,
 
     //Association avec commande et produit

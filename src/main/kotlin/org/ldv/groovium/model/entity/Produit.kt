@@ -11,11 +11,15 @@ class Produit (
     var id: Int,
     var nom: String,
     var prix: Double,
-    var categorie: String,
 
     //Association avec LigneCommande
     @OneToMany(mappedBy = "produit", orphanRemoval = true)
-    var ligneCommandes: MutableList<LigneCommande> = mutableListOf()
+    var ligneCommandes: MutableList<LigneCommande> = mutableListOf(),
+
+    //Association avec catégorie
+    @ManyToOne
+    @JoinColumn(name = "categorie_id")
+    var categorie: Categorie? = null
 ){
     fun ajouterPanier(){}
 }
