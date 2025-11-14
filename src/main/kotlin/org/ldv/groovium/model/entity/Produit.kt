@@ -13,13 +13,9 @@ class Produit (
     var prix: Double,
     var categorie: String,
 
-    @ManyToMany
-    @JoinTable(
-        name = "produit_commandes",
-        joinColumns = [JoinColumn(name = "produit_id")],
-        inverseJoinColumns = [JoinColumn(name = "commande_id")]
-    )
-    var commandes: MutableList<Commande> = mutableListOf()
+    //Association avec LigneCommande
+    @OneToMany(mappedBy = "produit", orphanRemoval = true)
+    var ligneCommandes: MutableList<LigneCommande> = mutableListOf()
 ){
     fun ajouterPanier(){}
 }

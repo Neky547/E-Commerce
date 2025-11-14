@@ -14,14 +14,9 @@ class Commande(
     @JoinColumn(name = "utilisateur_id")
     var utilisateur: Utilisateur? = null,
 
-    //Association avec Produit
-    @ManyToMany
-    @JoinTable(
-        name = "commande_produits",
-        joinColumns = [JoinColumn(name = "commande_id")],
-        inverseJoinColumns = [JoinColumn(name = "produit_id")]
-    )
-    var produits: MutableList<Produit> = mutableListOf()
+    //Association avec Ligne commande
+    @OneToMany(mappedBy = "commande", orphanRemoval = true)
+    var ligneCommandes: MutableList<LigneCommande> = mutableListOf()
 
 ) {
     fun afficherDetails(){}
