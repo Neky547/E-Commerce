@@ -4,9 +4,9 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
-class MainController {
+class AdminController {
     @GetMapping("/Groovium/admin")
     fun home(): String {
-        return "dashboard"
+        return "pageAdmin/dashboard"
     }
 }

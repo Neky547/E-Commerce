@@ -22,29 +22,29 @@ class DataInitializer(
         println("Initialisation des données...")
 
         // === Catégories ===
-        val catGadget = Categorie(nom = "Gadgets")
-        val catJouet = Categorie(nom = "Jouets")
-        val catMaison = Categorie(nom = "Maison")
+        val catGuitares = Categorie(nom = "Guitares électriques")
+        val catBatteries = Categorie(nom = "Batteries électriques")
+        val catPianos = Categorie(nom = "Pianos électriques")
 
-        categorieDAO.saveAll(listOf(catGadget, catJouet, catMaison))
+        categorieDAO.saveAll(listOf(catGuitares , catBatteries, catPianos))
 
         // === Produits ===
 
-        val produitMontre = Produit(
-            nom = "Montre connectée",
-            description = "Montre connectée avec capteur de fréquence cardiaque et suivi d’activité.",
-            stock = 20,
-            prix = 79.99,
-            lienImage = "https://example.com/images/montre-connectee.jpg",
+        val produitGuitare = Produit(
+            nom = "Guitare",
+            description = "Guitare électrique avec câble",
+            stock = 65,
+            prix = 109.99,
+            lienImage = "/img/guitare.png",
             categorie = null
         )
 
-        val produitDrone = Produit(
-            nom = "Mini drone",
-            description = "Drone compact avec caméra HD et contrôle via smartphone.",
+        val produitBatterie = Produit(
+            nom = "Batterie",
+            description = "Kit complet de batterie électrique avec câbles",
             stock = 15,
-            prix = 149.99,
-            lienImage = "https://example.com/images/mini-drone.jpg",
+            prix = 1249.99,
+            lienImage = "img/batterie.png",
             categorie = null
         )
 
@@ -52,8 +52,8 @@ class DataInitializer(
         // === Sauvegarde des articles ===
         produitDAO.saveAll(
             listOf(
-                produitMontre,
-                produitDrone
+                produitGuitare,
+                produitBatterie
             )
         )
 
