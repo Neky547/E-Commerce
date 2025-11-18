@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html th:replace="baseAdmin::html" lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>AdminProduits</title>
 </head>
 <body>
-
+<div th:fragment="content">
+    <main class="py-5">
+        <div class="container">
+            <h1>Gestion des articles</h1>
+            <p>Nombres d'articles : <span th:text="${produits.size()}"></span></p>
+        </div>
+    </main>
+</div>
 </body>
 </html>
