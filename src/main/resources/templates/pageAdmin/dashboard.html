@@ -6,38 +6,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <div>
-        <h1 class="text-center mt-5">Administration des catégories</h1>
-        <h3>Catégories</h3>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Guitare</td>
-                <td><td><button type="button" class="btn btn-primary">Afficher</button>  <button type="button" class="btn btn-warning">Modifier</button>  <button type="button" class="btn btn-danger">Supprimer</button></td></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Batterie</td>
-                <td><td><button type="button" class="btn btn-primary">Afficher</button>  <button type="button" class="btn btn-warning">Modifier</button>  <button type="button" class="btn btn-danger">Supprimer</button></td></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Piano</td>
-                <td><td><button type="button" class="btn btn-primary">Afficher</button>  <button type="button" class="btn btn-warning">Modifier</button>  <button type="button" class="btn btn-danger">Supprimer</button></td></td>
-            </tr>
-            </tbody>
-        </table>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5">
-            <button type="button" class="btn btn-success">+ Créer une nouvelle catégorie</button>
-        </div>
+    <div class="container">
+        <h1 class="text-center mt-5">Dashboard</h1>
+        <h3><a th:href="@{'/Groovium/admin/categorie'}" class="btn-btn-primary">Gerer les categories</a></h3>
+        <h3><a th:href="@{'/Groovium/admin/produit'}">Gerer les produits</a></h3>
     </div>
 </body>
 </html>
