@@ -1,6 +1,7 @@
-package org.ldv.groovium.model.entity
+package org.ldv.groovium.Service
 
 import org.ldv.groovium.model.dao.UtilisateurDAO
+import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.stereotype.Service
@@ -68,11 +69,10 @@ class MyUserDetailsService(private val utilisateurDAO: UtilisateurDAO) : UserDet
          * Spring Security ajoute automatiquement "ROLE_" devant les rôles.
          * Exemple : roles("ADMIN") deviendra "ROLE_ADMIN"
          */
-        return org.springframework.security.core.userdetails.User
+        return User
             .withUsername(utilisateur.email)   // Identifiant de connexion
             .password(utilisateur.mdp)         // Mot de passe hashé
             .roles(leRole)                     // Rôle(s) attribué(s)
             .build()
     }
 }
-

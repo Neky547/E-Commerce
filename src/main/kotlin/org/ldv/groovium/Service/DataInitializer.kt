@@ -1,8 +1,10 @@
-package org.ldv.groovium.model.entity
+package org.ldv.groovium.Service
 
 import org.ldv.groovium.model.dao.CategorieDAO
 import org.ldv.groovium.model.dao.CommentaireDAO
 import org.ldv.groovium.model.dao.ProduitDAO
+import org.ldv.groovium.model.entity.Categorie
+import org.ldv.groovium.model.entity.Produit
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 
