@@ -8,7 +8,7 @@ class Role(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
 
-    var id: Int,
+    var id: Int? = null,
     var nom: String,
 
     //Association avec Utilisateur

@@ -25,11 +25,11 @@ class SecurityConfig {
             .csrf { it.disable() } //TODO Retirer cette ligne
             //Restriction des endpoints en fonction du role
             .authorizeHttpRequests {
-                it.requestMatchers("/e-kommerce", "/e-kommerce/register", "/e-kommerce/login", "/css/**", "/js/**", "/img/**", "/favicon.ico").permitAll()
+                it.requestMatchers("/Groovium", "/Groovium/register", "/Groovium/login", "/css/**", "/js/**", "/img/**", "/favicon.ico").permitAll()
                     // Autoriser l'accès pour les utilisateurs avec le rôle "ADMIN" à /admin/**
-                    .requestMatchers("/e-kommerce/admin/**").hasRole("ADMIN")
+                    .requestMatchers("/Groovium/admin/**").hasRole("ADMIN")
                     // Autoriser l'accès pour les utilisateurs avec le rôle "CLIENT" à /client/**
-                    .requestMatchers("/e-kommerce/client/**").hasRole("CLIENT")
+                    .requestMatchers("/Groovium/client/**").hasRole("CLIENT")
                     // Toutes les autres requêtes doivent être authentifiées
                     .anyRequest().authenticated()
 
@@ -37,14 +37,14 @@ class SecurityConfig {
             // Configuration du formulaire de connexion
             .formLogin { form: FormLoginConfigurer<HttpSecurity?> ->
                 form
-                    .loginPage("/e-kommerce/login").defaultSuccessUrl("/e-kommerce/profil").failureUrl("/e-kommerce/login?error=true")
+                    .loginPage("/Groovium/login").defaultSuccessUrl("/Groovium/profil").failureUrl("/e-kommerce/login?error=true")
                     .permitAll()
             }
 
             // Configuration du mécanisme de déconnexion
             .logout { logout: LogoutConfigurer<HttpSecurity?> ->
                 logout
-                    .logoutUrl("/e-kommerce/logout")
+                    .logoutUrl("/Groovium/logout")
                     .permitAll()
             }
 
