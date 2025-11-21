@@ -1,6 +1,6 @@
 package org.ldv.groovium.controller
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication
+import org.springframework.security.core.Authentication
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
@@ -46,8 +46,9 @@ class MainController {
         return "pagesVisiteur/login"
     }
 
+
     //PROFIL
-    @GetMapping("/e-kommerce/profil")
+    @GetMapping("/Groovium/profil")
     fun profile(authentication: Authentication): String {
 
         // Récupération des rôles (authorities) de l’utilisateur connecté
@@ -55,12 +56,11 @@ class MainController {
 
         // Si l'utilisateur est admin → redirection
         if ("ROLE_ADMIN" in roles) {
-            return "redirect:/e-kommerce/admin/dashboard"
+            return "redirect:/Groovium/admin/dashboard"
         }
 
         // Sinon → on affiche la page profile
-        return "pagesClient/profile"
+        return "pageClient/profile"
     }
-
 
 }

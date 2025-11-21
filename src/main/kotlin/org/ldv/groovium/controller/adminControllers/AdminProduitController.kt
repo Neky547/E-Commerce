@@ -1,4 +1,4 @@
-package org.ldv.groovium.controller
+package org.ldv.groovium.controller.adminControllers
 
 import org.ldv.groovium.model.dao.ProduitDAO
 import org.springframework.stereotype.Controller

@@ -1,4 +1,4 @@
-package org.ldv.groovium.controller
+package org.ldv.groovium.controller.adminControllers
 
 import org.ldv.groovium.model.dao.CategorieDAO
 import org.springframework.stereotype.Controller
@@ -14,5 +14,4 @@ class AdminCategorieController(val categorieDAO: CategorieDAO) {
         model.addAttribute("categories",categorieDAO.findAll())
         return "pageAdmin/categorie/index"
     }
-
 }
