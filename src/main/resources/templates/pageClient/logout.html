@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+</head>
+<body>
+
+    <div class="col-md-3 text-end">
+        <div sec:authorize="isAuthenticated()" class="nav-item">
+            <form action="/Groovium/logout" method="post">
+                <button class="btn btn-outline-primary me-2">Logout</button>
+            </form>
+        </div>
+
+        <button sec:authorize="isAnonymous()" type="button" class="btn btn-outline-primary me-2">Login</button>
+        <button sec:authorize="isAnonymous()" type="button" class="btn btn-outline-primary">Inscription</button>
+    </div>
+
+</body>
+</html>
