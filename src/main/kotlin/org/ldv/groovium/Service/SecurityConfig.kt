@@ -25,11 +25,11 @@ class SecurityConfig {
             .csrf { it.disable() } //TODO Retirer cette ligne
             //Restriction des endpoints en fonction du role
             .authorizeHttpRequests {
-                it.requestMatchers("/Groovium", "/Groovium/register", "/Groovium/login", "/css/**", "/js/**", "/img/**", "/favicon.ico").permitAll()
+                it.requestMatchers("/**","/Groovium", "/Groovium/register", "/Groovium/login", "/css/**", "/js/**", "/img/**", "/favicon.ico").permitAll()
                     // Autoriser l'accès pour les utilisateurs avec le rôle "ADMIN" à /admin/**
-                    .requestMatchers("/Groovium/admin/**").hasRole("ADMIN")
+                    //.requestMatchers("/Groovium/admin/**").hasRole("ADMIN")
                     // Autoriser l'accès pour les utilisateurs avec le rôle "CLIENT" à /client/**
-                    .requestMatchers("/Groovium/client/**").hasRole("CLIENT")
+                    //.requestMatchers("/Groovium/client/**").hasRole("CLIENT")
                     // Toutes les autres requêtes doivent être authentifiées
                     .anyRequest().authenticated()
 
@@ -38,6 +38,7 @@ class SecurityConfig {
             .formLogin { form: FormLoginConfigurer<HttpSecurity?> ->
                 form
                     .loginPage("/Groovium/login").defaultSuccessUrl("/Groovium/profil").failureUrl("/e-kommerce/login?error=true")
+                    .loginProcessingUrl("/Groovium/login")
                     .permitAll()
             }
 
