@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+
+    <div class="min-vh-100">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img th:src="@{static/img/logo.png}" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
+                    </a>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Rechercher">
+                            <button class="btn btn-outline-dark" type="submit">Chercher</button>
+                        </form>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container" th:replace="::content">
 
             </div>
-        </nav>
-    </header>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 </body>
 </html>

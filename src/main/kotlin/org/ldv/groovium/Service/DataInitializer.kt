@@ -78,7 +78,7 @@ class DataInitializer(
             stock = 65,
             prix = 109.99,
             lienImage = "/img/guitare.png",
-            categorie = null
+            categorie = catGuitares
         )
 
         val produitBatterie = Produit(
@@ -87,7 +87,7 @@ class DataInitializer(
             stock = 15,
             prix = 1249.99,
             lienImage = "img/batterie.png",
-            categorie = null
+            categorie = catBatteries
         )
 
 
