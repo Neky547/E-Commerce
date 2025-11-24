@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Details</title>
 </head>
 <body>
+    <div class="container">
+        <h1 class="mb-5 text-center" th:text="${produit.nom}"></h1>
+        <div class="row">
+            <div class="col">
+                <img th:src="" alt="">
+            </div>
+            <div class="col">
+                <ul>
+                    <li>Prix : <span th:text="${produit.prix}"></span></li>
+                    <li>Stock : <span th:text="${produit.stock}"></span></li>
+                    <li></li>
+                    <li>Description : <span th:text="${produit.description}"></span></li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="btn-group">
+            <a th:href="@{/Groovium/admin/produit}" class="btn btn-secondary">Retour</a>
+            <a href=""  class="btn btn-secondary">Modifier</a>
+            <a href=""  class="btn btn-secondary">Supprimer</a>
+        </div>
+    </div>
 </body>
 </html>

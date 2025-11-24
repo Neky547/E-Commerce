@@ -26,4 +26,5 @@ class Produit (
     var categorie: Categorie? = null
 ){
     fun ajouterPanier(){}
+
 }
