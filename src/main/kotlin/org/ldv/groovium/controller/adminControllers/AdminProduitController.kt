@@ -24,7 +24,7 @@ class AdminProduitController (val produitDAO: ProduitDAO, val categorieDAO: Cate
     }
 
     //Méthode de création de produit
-    @GetMapping("Groovium/admin/produit/creer")
+    @GetMapping("/Groovium/admin/produit/creer")
     fun create(model: Model):String{
         var nouveauProduit = Produit(nom = "", description = "", stock = 1, prix = 1.0, lienImage = "")
         var categories = categorieDAO.findAll()

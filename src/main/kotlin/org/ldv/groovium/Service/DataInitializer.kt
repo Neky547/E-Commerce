@@ -50,8 +50,6 @@ class DataInitializer(
             role = roleAdmin
         )
 
-
-
         val client = Utilisateur(
             id = null,
             nom = "Jean",
@@ -73,20 +71,20 @@ class DataInitializer(
         // === Produits ===
 
         val produitGuitare = Produit(
-            nom = "Guitare",
+            nom = "Guitare AK47",
             description = "Guitare électrique avec câble",
             stock = 65,
             prix = 109.99,
-            lienImage = "/img/guitare.png",
-            categorie = catGuitares
+            lienImage = "/img/guitareAK47.jpg",
+            categorie = catGuitares,
         )
 
         val produitBatterie = Produit(
-            nom = "Batterie",
+            nom = "Batterie P90",
             description = "Kit complet de batterie électrique avec câbles",
             stock = 15,
             prix = 1249.99,
-            lienImage = "img/batterie.png",
+            lienImage = "/img/batterieP90.jpg",
             categorie = catBatteries
         )
 
