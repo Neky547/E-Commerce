@@ -14,7 +14,7 @@
             <h1>Gestion des articles</h1>
             <p>Nombres d'articles : <span th:text="${produits.size()}"></span></p>
 
-            <a href="" class="btn btn-success"><i class="bi bi-plus-circle"></i> Article</a>
+            <a th:href="@{'/Groovium/admin/produit/creer'}" class="btn btn-success"><i class="bi bi-plus-circle"></i> Article</a>
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -39,7 +39,6 @@
                         <a href="" class="btn btn-primary">Afficher</a>
                         <a href="" class="btn btn-warning">Modifier</a>
                     </td>
-
                 </tr>
                 </tbody>
             </table>

@@ -80,20 +80,41 @@ class DataInitializer(
         )
 
         val produitBatterie = Produit(
-            nom = "Batterie P90",
-            description = "Kit complet de batterie électrique avec câbles",
-            stock = 15,
-            prix = 1249.99,
+            nom = "Batterie Thunderstrike X900",
+            description = "Batterie électrique professionnelle noir & or avec module numérique",
+            stock = 10,
+            prix = 1799.99,
             lienImage = "/img/batterieP90.jpg",
             categorie = catBatteries
         )
+
+        val produitGuitareM4 = Produit(
+            nom = "Guitare M4 Shadow",
+            description = "Guitare électrique premium en finition noir et doré",
+            stock = 42,
+            prix = 189.99,
+            lienImage = "/img/guitareM4Shadow.jpg",
+            categorie = catGuitares
+        )
+
+        val produitPianoEclipse = Produit(
+            nom = "Piano Eclipse 88",
+            description = "Piano électrique 88 touches full black avec détails dorés",
+            stock = 23,
+            prix = 899.99,
+            lienImage = "/img/pianoEclipse88.jpg",
+            categorie = catPianos
+        )
+
 
 
         // === Sauvegarde des articles ===
         produitDAO.saveAll(
             listOf(
                 produitGuitare,
-                produitBatterie
+                produitBatterie,
+                produitGuitareM4,
+                produitPianoEclipse
             )
         )
 

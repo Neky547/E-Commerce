@@ -2,12 +2,48 @@
 <html th:replace="base :: html" lang="fr" xmlns:th="http://www.thymeleaf.org">
 <div th:fragment="content">
     <main class="py-5">
-        <div class="container">
+        <div class="thehead">
             <h1 class="mb-5 text-center"><strong>Trouvez le son parfait.</strong></h1>
+        </div>
+        <div class="container">
+            <!-- Batteries-->
+            <div class="row mt-5">
+                <div class="col-md-5">
+                    <img src="/img/batterie.png" class="img-fluid w-75 rounded">
+                </div>
+                <div class="col-7">
+                    <h3>Batteries</h3>
+                    <p>Compactes et silencieuses, nos batteries électroniques garantissent un jeu fluide et réaliste, parfait pour la scène ou la maison.</p>
+                    <button type="button" class="btn btn-light">Découvrir nos articles</button>
+                </div>
+            </div>
+            <!-- Guitares-->
+            <div class="row mt-5">
+                <div class="col-7">
+                    <h3>Guitares</h3>
+                    <p>Puissantes et précises, nos guitares électriques offrent un son riche et un design moderne pour tous les styles de musique.</p>
+                    <button type="button" class="btn btn-light">Découvrir nos articles</button>
+                </div>
+                <div class="col-md-5">
+                    <img src="/img/guitare.png" class="img-fluid w-75 rounded">
+                </div>
+            </div>
+            <!-- Claviers-->
+            <div class="row mt-5">
+                <div class="col-md-5">
+                    <img src="/img/piano.png" class="img-fluid w-75 rounded">
+                </div>
+                <div class="col-7">
+                    <h3>Claviers</h3>
+                    <p>Expressifs et polyvalents, nos claviers électroniques allient réalisme et innovation pour inspirer chaque note.</p>
+                    <button type="button" class="btn btn-light">Découvrir nos articles</button>
+                </div>
+            </div>
 
 
+            <!--PROMOTIONS A VENIR-->
+            <h2 class="text-center my-5">Nos promotions à venir</h2>
         </div>
     </main>
 </div>
-
 </html>

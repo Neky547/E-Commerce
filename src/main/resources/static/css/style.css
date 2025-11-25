@@ -1,3 +1,10 @@
 body {
     background-color: rgb(0, 0, 0);
 }
+.thehead{
+    background-image: url("/img/accueil.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+}
