@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+<html th:replace="base :: html" lang="fr" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="content">
+    <main class="py-5">
+        <div class="container">
+            <div class="col-8 col-lg-6 mx-auto p-2  mt-3">
+                <form action="/Groovium/inscription" method="post">
+                    <h1>Register</h1>
+                    <div class="mb-3">
+                        <label for="username">Email</label>
+                        <input required class="form-control" id="username" name="username" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password">Mdp</label>
+                        <input required class="form-control" id="password" name="password" type="password">
+                    </div>
+                    <button class="btn btn-primary">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
 </html>

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
-class MainController {
+class                        MainController {
     @GetMapping("/Groovium")
     fun home():String{
         return "index"
