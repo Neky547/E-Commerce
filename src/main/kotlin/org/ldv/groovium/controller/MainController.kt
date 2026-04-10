@@ -13,33 +13,33 @@ class                        MainController {
         return "index"
     }
 
-    @GetMapping("/Accueil")
+    @GetMapping("Groovium/Accueil")
     fun apropos():String{
         return "pagesVisiteur/a-propos"
     }
 
-    @GetMapping("/Contact")
+    @GetMapping("Groovium/Contact")
     fun contact():String{
         return "pagesVisiteur/contact"
     }
 
-    @GetMapping("/Inscription")
+    @GetMapping("Groovium/Inscription")
     fun inscription():String{
         return "pagesVisiteur/inscription"
     }
 
-    @GetMapping("/Produits")
+    @GetMapping("Groovium/Produits")
     fun produits():String{
         return "pagesVisiteur/produits"
     }
 
-    @GetMapping("/RGPD")
+    @GetMapping("Groovium/RGPD")
     fun rgpd():String{
         return "pagesVisiteur/rgpd"
     }
 
     //LOGIN
-    @GetMapping("/Groovium/login")
+    @GetMapping("/Groovium/Login")
     fun login(@RequestParam error: Boolean?, model: Model): String {
         // Ajoute un attribut "error" au modèle si la requête contient une erreur
         model.addAttribute("error", error == true)
@@ -48,7 +48,7 @@ class                        MainController {
 
 
     //PROFIL
-    @GetMapping("/Groovium/profil")
+    @GetMapping("/Groovium/Profile")
     fun profile(authentication: Authentication): String {
 
         // Récupération des rôles (authorities) de l’utilisateur connecté
