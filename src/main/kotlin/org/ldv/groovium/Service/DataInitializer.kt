@@ -109,14 +109,16 @@ class DataInitializer(
 
 
         // === Sauvegarde des articles ===
-        produitDAO.saveAll(
-            listOf(
-                produitGuitare,
-                produitBatterie,
-                produitGuitareM4,
-                produitPianoEclipse
+        if(produitDAO.count()== 0L) {
+            produitDAO.saveAll(
+                listOf(
+                    produitGuitare,
+                    produitBatterie,
+                    produitGuitareM4,
+                    produitPianoEclipse
+                )
             )
-        )
+        }
 
         println("✅ Données initiales insérées : ${categorieDAO.count()} catégories, ${produitDAO.count()} articles.")
     }

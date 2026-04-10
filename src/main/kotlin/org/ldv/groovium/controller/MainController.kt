@@ -1,5 +1,6 @@
 package org.ldv.groovium.controller
 
+import org.ldv.groovium.model.dao.ProduitDAO
 import org.springframework.security.core.Authentication
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
-class                        MainController {
+class MainController(private val produitDAO: ProduitDAO) {
     @GetMapping("/Groovium")
     fun home():String{
         return "index"
@@ -28,9 +29,10 @@ class                        MainController {
         return "pagesVisiteur/inscription"
     }
 
-    @GetMapping("Groovium/Produits")
-    fun produits():String{
-        return "pagesVisiteur/produits"
+    @GetMapping("/Groovium/Produits")
+    fun listeProduits(model: Model): String {
+        model.addAttribute("produits", produitDAO.findAll())
+        return "produits"
     }
 
     @GetMapping("Groovium/RGPD")
