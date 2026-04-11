@@ -33,6 +33,7 @@ class MainController(private val produitDAO: ProduitDAO) {
     fun listeProduits(model: Model): String {
         model.addAttribute("produits", produitDAO.findAll())
         return "produits"
+
     }
 
     @GetMapping("Groovium/RGPD")
