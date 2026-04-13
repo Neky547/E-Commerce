@@ -32,7 +32,7 @@ class MainController(private val produitDAO: ProduitDAO) {
     @GetMapping("/Groovium/Produits")
     fun listeProduits(model: Model): String {
         model.addAttribute("produits", produitDAO.findAll())
-        return "produits"
+        return "pagesVisiteur/produits"
 
     }
 
